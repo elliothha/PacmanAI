@@ -1,6 +1,6 @@
 # PacmanAI
 
-A single-agent reinforcement learning project utilizing a convolutionasl dueling Deep Q-Network (DDQN) architecture to play Atari 2600's "Ms. Pacman" in OpenAI's Gym environment. An epsilon-greedy strategy is used for balancing exploration and exploitation in the environment. Hyperparameters used for the networks include:
+A single-agent reinforcement learning project utilizing a convolutional dueling Deep Q-Network (DDQN) architecture to play Atari 2600's "Ms. Pacman" in OpenAI's Gym environment. An epsilon-greedy strategy is used for balancing exploration and exploitation in the environment. Hyperparameters used for the networks include:
 
 |   HYPERPARAMETER   | VALUE |
 |:------------------:|:-----:|
