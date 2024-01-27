@@ -36,6 +36,8 @@ The RL agent built follows the convolutional Dueling Deep Q-Network (Dueling DQN
 
 In essence, the Dueling DQN architecture is used to provide Q-value estimations for state-action pairs. And as such, the input to the Dueling DQN will be an observation "state" taken from the environment. Here, a state is defined to be a batched Tensor of shape [batch_size, 4, 84, 84]. As mentioned in the environment description, a single observation frame is a (210, 160, 3) RGB array. Each frame is resized to be (84, 84) from (210, 160), then converted to grayscale to reduce dimensionality as color is not an integral part of playing this specific game, and finally normalized. Four consecutive observation frames are stacked together in order to give the architecture a sense of what is happening in temporal space. Further frame stacking techniques like frame skipping have not been implemented.
 
+Future plans include implementing a much more thorough frame skipping method as outlined in this [article](https://danieltakeshi.github.io/2016/11/25/frame-skipping-and-preprocessing-for-deep-q-networks-on-atari-2600-games/).
+
 ### Architecture
 
 The input to the Dueling DQN architecture is sent through three convolutional layers, with ReLU activation functions following each convolution. The [batch_size, 4, 84, 84] input Tensor is convoluted into [batch_size, 32, 20, 20], then [batch_size, 64, 9, 9], then [batch_size, 64, 7, 7]. 
